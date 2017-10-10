@@ -30,7 +30,7 @@ React essentially combines the JavaScript code and HTML templating into one file
 There are 3 HTML elements in this example code that are points of interest:
 
 1. A form input that keeps track of the `amount`.
-2. A button with an `onclick` handler. `onclick`, call the Clover `doSale` method provided by the Android code, pass in the `amount` as a parameter.
+2. A button with an `onclick` handler. `onclick`, call the Clover `doSale` method provided by `WebviewAndroidBinding.java`, pass in the `amount` as a parameter.
 3. A `<div>` with `id="saleResponse"`. initially this element doesn't do anything. It just serves as a UI element that can be mutated when the `doSale` method from Android/Clover finishes.
 
 Please keep in mind that .jsx syntax for React is different than other templating languages, or vanilla HTML. (For example, `class` => `className` in jsx, `onchange` => `onChange`, etc.)

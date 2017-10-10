@@ -14,7 +14,7 @@ public class WebviewAndroidBinding extends AppCompatActivity {
 
     webView = (WebView) findViewById(R.id.WebApp);
     webView.getSettings().setJavaScriptEnabled(true);
-    webView.addJavascriptInterface(new WebAppInterface(this), "Android");
+    webView.addJavascriptInterface(new WebAppInterface(this), "Clover");
 
     webView.setWebViewClient(new WebViewClient());
 

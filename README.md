@@ -17,7 +17,7 @@ Your web application's page must:
 
 https://vimeo.com/237588664
 
-The demo itself is quick, and then goes into additional detail explaining the underlying code, for those who are interested. I also hope to explain the underlying code in this README.
+The demo itself is quick, and then goes into additional detail explaining the underlying code, for those who are interested. This README also explains the underlying code.
 
 ## Code walkthrough
 
@@ -39,7 +39,7 @@ Please keep in mind that .jsx syntax for React is different than other templatin
 
 #### activity_webview_android_binding.xml
 
-A simple layout file with an Android WebView. Most Clover devices cannot have a browser due to PCI compliance, but webpages can still be rendered in WebViews.
+A simple layout file with an [Android WebView](https://developer.android.com/reference/android/webkit/WebView.html). Most Clover devices do not have a browser due to PCI compliance, but webpages can still be rendered in WebViews.
 
 #### WebviewAndroidBinding.java
 
@@ -47,6 +47,6 @@ TODO: Change the private `PAGE_URL` variable to your web application's URl.
 
 In `onCreate`, we will load this `PAGE_URL` and provide methods to the JavaScript context from within the `WebAppInterface` class.
 
-The `doSale` method uses code provided by the [clover-android-sdk](https://github.com/clover/clover-android-sdk). Specifically, it fires [an intent](https://github.com/clover/clover-android-sdk/blob/ba1bc1e5ab0c2189108b3c4b6de6c79c4fb6065b/clover-android-sdk/src/main/java/com/clover/sdk/v1/Intents.java) to launch Clover's Payments application. 
+The `doSale` method uses code provided by the [clover-android-sdk](https://github.com/clover/clover-android-sdk). Specifically, it fires [an Intent](https://github.com/clover/clover-android-sdk/blob/ba1bc1e5ab0c2189108b3c4b6de6c79c4fb6065b/clover-android-sdk/src/main/java/com/clover/sdk/v1/Intents.java) to launch Clover's Payments application. 
 
 When the Payments application completes, `onActivityResult()` is invoked as a callback. In `onActivityResult()`, we use `WebView#loadUrl()` to inject plain old JavaScript into the web application. In this case, we invoke the `window.onSaleResponse()` method that's provided in the `react.jsx` file.

@@ -25,7 +25,7 @@ Both JavaScript and Android code is required to make this work. Let's talk about
 
 ### JavaScript code (react.jsx file)
 
-React essentially combines the JavaScript code and HTML templating into one file (.jsx), whereas other frameworks might use a combination of JavaScript + Handlebars, for example. As a result, some adaptation might be necessary to convert this code into something usable by your favorite frontend framework.
+React essentially combines the JavaScript code and HTML templating into one file (.jsx), whereas other frameworks might place the JS and the HTML in separate files. As a result, some adaptation might be necessary to convert this code into something usable by your favorite frontend framework.
 
 There are 3 HTML elements in this example code that are points of interest:
 
@@ -43,7 +43,7 @@ A simple layout file with an [Android WebView](https://developer.android.com/ref
 
 #### WebviewAndroidBinding.java
 
-TODO: Change the private `PAGE_URL` variable to your web application's URl.
+TODO: Change the private `PAGE_URL` variable to your web application's URL.
 
 In `onCreate`, we will load this `PAGE_URL` and provide methods to the JavaScript context from within the `WebAppInterface` class.
 
